@@ -1,0 +1,20 @@
+correspondence (BPMN,DMN,UML) {
+	
+	relate (BPMN.Activity,BPMN.And) as Decision with {
+		relate (DMN.Table.name,BPMN.Node.name) as name;
+	};
+	
+	relate (BPMN.ProcessVariable, DMN.Column, UML.Attribute) as DecisionVar with {
+		relate (BPMN.Node.name, DMN.Column.name, UML.Attribute.name) as name;
+		relate (DMN.Column.type, UML.Attribute.type) as type;
+	};
+	
+	relate (DMN.DataType,UML.BaseType) as Type with {
+		relate (DMN.DataType.name, UML.BaseType.name) as name;
+	};
+	
+	relate (BPMN.ProcessVariable,UML.Class) as ProcEntity;
+	
+	relate (BPMN.ProcessVariable, UML.Attribute) as ProcAttr;
+
+};

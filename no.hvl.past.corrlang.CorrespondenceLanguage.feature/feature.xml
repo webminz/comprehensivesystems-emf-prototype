@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature id="no.hvl.past.corrlang.CorrespondenceLanguage.feature"
+	label="CorrespondenceLanguage Feature "
+	version="1.0.0.qualifier">
+	<plugin
+			id="no.hvl.past.corrlang.CorrespondenceLanguage"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="no.hvl.past.corrlang.CorrespondenceLanguage.ide"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+	<plugin
+			id="no.hvl.past.corrlang.CorrespondenceLanguage.ui"
+			download-size="0"
+			install-size="0"
+			version="0.0.0"
+			unpack="false"/>
+</feature>

@@ -1,0 +1,5 @@
+platform:/resource/ComprehensiveSystems/model-gen/comprehensive.ecore
+platform:/resource/ComprehensiveSystems/instances/Commonalities.xmi
+platform:/resource/ComprehensiveSystems/instances/BPMN-instance.xmi
+platform:/resource/ComprehensiveSystems/instances/UML-instance.xmi
+platform:/resource/ComprehensiveSystems/instances/DMN-instance.xmi

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: no.hvl.past.corrlang.CorrespondenceLanguage.ide
+Bundle-ManifestVersion: 2
+Bundle-Name: no.hvl.past.corrlang.CorrespondenceLanguage.ide
+Bundle-Vendor: My Company
+Bundle-Version: 1.0.0.qualifier
+Bundle-SymbolicName: no.hvl.past.corrlang.CorrespondenceLanguage.ide; singleton:=true
+Bundle-ActivationPolicy: lazy
+Require-Bundle: no.hvl.past.corrlang.CorrespondenceLanguage,
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide,
+ org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: no.hvl.past.corrlang.ide,
+ no.hvl.past.corrlang.ide.contentassist.antlr,
+ no.hvl.past.corrlang.ide.contentassist.antlr.internal

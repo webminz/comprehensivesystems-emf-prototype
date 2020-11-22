@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="Comprehensive" nsURI="https://www.example.com/comprehensive"
+    nsPrefix="comprehensive">
+  <eClassifiers xsi:type="ecore:EClass" name="Commonalities">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="commons" eType="#//Commonality"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Commonality" abstract="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Type" eSuperTypes="#//Commonality">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projection_DataType" eType="ecore:EClass ../model/DMN.ecore#//DataType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projection_BaseType" eType="ecore:EClass ../model/UML.ecore#//BaseType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcEntity" eSuperTypes="#//Commonality">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projection_ProcessVariable"
+        eType="ecore:EClass ../model/BPMN.ecore#//ProcessVariable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projection_Class" eType="ecore:EClass ../model/UML.ecore#//Class"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ProcAttr" eSuperTypes="#//Commonality">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projection_ProcessVariable"
+        eType="ecore:EClass ../model/BPMN.ecore#//ProcessVariable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projection_Attribute" eType="ecore:EClass ../model/UML.ecore#//Attribute"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Decision" eSuperTypes="#//Commonality">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projection_Activity" eType="ecore:EClass ../model/BPMN.ecore#//Activity"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projection_And" eType="ecore:EClass ../model/BPMN.ecore#//And"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DecisionVar" eSuperTypes="#//Commonality">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projection_ProcessVariable"
+        eType="ecore:EClass ../model/BPMN.ecore#//ProcessVariable"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projection_Column" eType="ecore:EClass ../model/DMN.ecore#//Column"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="projection_Attribute" eType="ecore:EClass ../model/UML.ecore#//Attribute"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//Type"/>
+  </eClassifiers>
+</ecore:EPackage>
